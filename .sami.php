@@ -12,10 +12,9 @@ $iterator = Finder::create()
     ->in($dir = 'src');
 
 $versions = GitVersionCollection::create($dir)
-    ->addFromTags('2.0.*')
-    ->addFromTags('2.1.*')
-    ->addFromTags('3.0.*')
-    ->add('master', 'master branch')
+    ->addFromTags('2.*')
+    ->addFromTags('3.*')
+    ->add('master', 'master branch');
 
 return new Sami($iterator, [
     'title'                => 'Laravel_Piwik',
